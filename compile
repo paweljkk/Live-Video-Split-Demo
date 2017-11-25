@@ -1,4 +1,4 @@
 #!/bin/bash
 #script to compile c++ code with opencv pkg
 
-g++ `pkg-config --cflags opencv` $1 `pkg-config --libs opencv`
+g++ `pkg-config --cflags opencv` $1 `pkg-config --libs opencv` -o ${1:0:-4}
