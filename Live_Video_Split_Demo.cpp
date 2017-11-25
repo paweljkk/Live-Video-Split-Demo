@@ -1,4 +1,4 @@
-#include <opencv2/imgcodecs.hpp>
+
 #include <opencv2/videoio.hpp>
 #include <opencv2/highgui.hpp>
 
@@ -17,12 +17,14 @@ int main(){
 		cout << "Failed to open camera";
 	}
 
+	cout << "Press ESC to exit the video stream";
+
 	while(true){
 		stream.read(cameraFrame);
-		cout << "Width : " << cameraFrame.size().width << endl;
-		cout << "Height: " << cameraFrame.size().height << endl;
-		cout << "Width/2 : " << cameraFrame.size().width/2 << endl;
-		cout << "Height/2: " << cameraFrame.size().height/2 << endl;
+		//cout << "Width : " << cameraFrame.size().width << endl;
+		//cout << "Height: " << cameraFrame.size().height << endl;
+		//cout << "Width/2 : " << cameraFrame.size().width/2 << endl;
+		//cout << "Height/2: " << cameraFrame.size().height/2 << endl;
 
 		int width = cameraFrame.cols;
 		int height = cameraFrame.rows;
